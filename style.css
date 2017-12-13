@@ -1,15 +1,134 @@
+* {
+	box-sizing: border-box;
+}
+
 body {
-	font-family: arial;
+	font-family: 'Arial','Verdana',sans-serif;
 	margin: 0;
 	background-color: #e8ebf1;
 }
-	.Bwrappers {
-		max-width: 1000px;
-		margin: 0 auto;
-		position: relative;
-	}
 
-		.Bwrappers:after {
+.wrapper {
+	max-width: 1000px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.clearfix::after {
+	content: '';
+	display: table;
+}
+
+.clearfix::after {
+	clear: both;
+}
+.container-slider {
+	background-color: #81e4ed;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	height: 100%;
+}
+.slider img  {
+	background-color: #dd5835;
+	display: block;
+	margin: 0 auto;
+	max-width: 1000px;
+	padding-left: 61px;
+}
+
+.slider ul {
+	text-align: center;
+}
+
+.slider li {
+	display: inline-block;
+	margin: 20px 10px 0;
+}
+
+.slider a {
+	display: inline-block;
+	height: 15px;
+	width: 15px;
+	background-color: gray;
+	border-radius: 50%;
+}
+
+.slider a:hover {
+	background-color: white;
+}
+
+.our-services {
+	padding: 30px 0;
+}
+
+.our-services > div  {
+	display: inline-block;
+	vertical-align: top;
+	width: calc((100% - (3 * 50px)) / 4);
+}
+
+.our-services > div:not(:last-child) {
+	margin-right: 44px;
+}
+
+.our-services h6 {
+	font-size: 15px;
+	font-weight: 700;
+	line-height: 20px;
+	text-transform: uppercase;
+}
+
+.our-services h6:before {
+	content: "";
+	background-color: #2aacc8;
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-position: center;
+	margin-right: 5%;
+	vertical-align: middle;
+}
+
+.our-services a {
+	color: #2aacc8;
+	text-decoration: none;
+	font-family: "Arial MT",sans-serif;
+	font-size: 0.9em;
+	font-weight: 400;
+	line-height: 20px;
+}
+
+.our-services a:before {
+	content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="7" height="11" viewBox="0 0 7 11"><defs><path id="6il7a" d="M462.33 867l-1.33-1.27 2.33-2.24-2.32-2.22 1.33-1.27 3.65 3.5z"/></defs><g><g transform="translate(-460 -858)"><use xlink:href="#6il7a"/></g></g></svg>');
+	display: inline;
+	color: black;
+	clear: both;
+	padding-right: 7px;
+	width:10px;
+	height:10px;
+}
+
+.our-services p {
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 20px;
+	color: #363636;
+	padding-bottom: 20px;
+	height: 120px;
+	overflow: hidden;
+}
+
+.our-latest-work {
+	background-color: white;
+	max-width: 100%;
+	padding-bottom: 30px;
+}
+
+
+
+
+.wrapper:after {
 			content: "";
 			display: block;
 			clear: both;
@@ -137,69 +256,9 @@ span {
 	vertical-align: top;
 }
 
-	.foil {
-		background-color: #81e4ed;
-		padding-top: 20px;
-		padding-bottom: 20px;
-		height: 100%;
-	}
-			.foil img  {
-				background-color: #dd5835;
-				display: block;
-				margin: 0 auto;
-				max-width: 1000px;
-			}
-			.foil ul {
-				text-align: center;
-			}
 
-			.foil li {
-				display: inline-block;
-				margin: 20px 10px 0;
-			}
 
-			.foil a {
-			display: inline-block;
-			height: 15px;
-			width: 15px;
-			background-color: gray;
-			border-radius: 50%;
-			}
 
-			.foil a:hover {
-				background-color: white;
-			}
-
-			.next {
-				padding: 30px;
-			}
-
-			.next > div  {
-				display: inline-block;
-				width: 23%;
-				margin: 5px;
-				vertical-align: top;
-			}
-
-			.next h6 {
-				font-size: 15px;
-				font-weight: 700;
-				line-height: 20px;
-				text-transform: uppercase;
-			}
-
-			.next h6:before {
-				content: "";
-				background-color: #2aacc8;
-				display: inline-block;
-				width: 40px;
-				height: 40px;
-				border-radius: 50%;
-				background-position: center;
-				margin-right: 5%;
-				vertical-align: top;
-				margin-bottom: 5%;
-			}
 
 			h6.pencil:before {
 				background-image: url(img/pencil.png);
@@ -221,33 +280,7 @@ span {
 			}
 			
 
-		.next p {
-			font-size: 13px;
-			font-weight: 400;
-			line-height: 20px;
-			color: #363636;
-			padding-bottom: 20px;
-			height: 120px;
-			overflow: hidden;
-		}
 
-		.next a {
-			color: #2aacc8;
-		}
-
-		.next a:before {
-			content: "\25b8";
-			display: inline;
-			color: black;
-			clear: both;
-			padding-right: 10px;
-		} 
-
-	.main {
-		background-color: white;
-		max-width: 100%;
-		padding-bottom: 30px;
-	}
 
 	.latest {
 		max-width: 1000px;
@@ -292,7 +325,11 @@ span {
 		.gallery {
 			display: inline-block;
 			position: relative;
+			width: 23%;
 		}
+.latest :not(:last-child) {
+	margin-right: 44px;
+}
 			.gallery img {
 				width: 100%;
 			}
